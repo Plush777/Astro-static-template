@@ -1,0 +1,10 @@
+#default
+node_modules
+dist
+.build
+
+# component
+/src/layouts/HtmlLayout.astro
+
+# lib
+/src/lib/**/*/

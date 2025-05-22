@@ -1,0 +1,64 @@
+---
+const { role = undefined} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="generator" content={Astro.generator} />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/styles/common/reset.css" />
+    <link rel="stylesheet" href="/styles/common/font.css" />
+    <link rel="stylesheet" href="/styles/common/hover.css" />
+
+    <link rel="stylesheet" href="/styles/layout/layout.css" />
+    <link rel="stylesheet" href="/styles/config/utils.css" />
+   
+    <link rel="stylesheet" href="/styles/components/accordion.css" />
+    <link rel="stylesheet" href="/styles/components/button.css" />
+    <link rel="stylesheet" href="/styles/components/form.css" />
+    <link rel="stylesheet" href="/styles/components/popup.css" />
+    <link rel="stylesheet" href="/styles/components/tab.css" />
+    <link rel="stylesheet" href="/styles/components/table.css" />
+
+    <link rel="stylesheet" href="/styles/lib/lib.css" />
+    <link rel="stylesheet" href="/styles/mobile/mobile.css" />
+
+    <link rel="stylesheet" href="/lib/swiper/swiper.css" />
+    <link rel="stylesheet" href="/lib/flatpickr/flatpickr.min.css">
+    
+    <script src="/lib/jquery/jquery-3.7.1-min.js" is:inline></script>
+    <script src="/lib/swiper/swiper.min.js" is:inline></script>
+    <script src="/lib/flatpickr/flatpickr.min.js" is:inline></script>
+    
+
+    {role === 'guide' &&
+      <link rel="stylesheet" href="/styles/guide/guide.css" />
+      <link rel="stylesheet" href="/lib/highlight/highlight.min.css" />
+      <script src="/lib/highlight/highlight.min.js" is:inline></script>
+      <script src="/lib/highlight/highlight-copy.min.js" is:inline></script>
+      <script src="/js/highlightInit.js" is:inline></script>
+    }
+
+    <script src="/js/script.js" is:inline></script>
+    <title>Astro static template</title> 
+  </head>
+  <body>
+    <div id="root">
+        <slot />
+    </div>
+  </body>
+</html>

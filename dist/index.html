@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="generator" content="Astro v5.7.13" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="./styles/common/reset.css" />
+    <link rel="stylesheet" href="./styles/common/font.css" />
+    <link rel="stylesheet" href="./styles/common/hover.css" />
+
+    <link rel="stylesheet" href="./styles/layout/layout.css" />
+    <link rel="stylesheet" href="./styles/config/utils.css" />
+
+    <link rel="stylesheet" href="./styles/components/accordion.css" />
+    <link rel="stylesheet" href="./styles/components/button.css" />
+    <link rel="stylesheet" href="./styles/components/form.css" />
+    <link rel="stylesheet" href="./styles/components/popup.css" />
+    <link rel="stylesheet" href="./styles/components/tab.css" />
+    <link rel="stylesheet" href="./styles/components/table.css" />
+
+    <link rel="stylesheet" href="./styles/lib/lib.css" />
+    <link rel="stylesheet" href="./styles/mobile/mobile.css" />
+
+    <link rel="stylesheet" href="./lib/swiper/swiper.css" />
+    <link rel="stylesheet" href="./lib/flatpickr/flatpickr.min.css" />
+
+    <script src="./lib/jquery/jquery-3.7.1-min.js"></script>
+    <script src="./lib/swiper/swiper.min.js"></script>
+    <script src="./lib/flatpickr/flatpickr.min.js"></script>
+
+    <link rel="stylesheet" href="./styles/guide/guide.css" />
+    <link rel="stylesheet" href="./lib/highlight/highlight.min.css" />
+    <script src="./lib/highlight/highlight.min.js"></script>
+    <script src="./lib/highlight/highlight-copy.min.js"></script>
+    <script src="./js/highlightInit.js"></script>
+
+    <script src="./js/script.js"></script>
+    <title>Astro static template</title>
+  </head>
+  <body>
+    <div id="root">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-logo">
+            <h1>
+              <a href="/">
+                <img src="./images/logo/logo.svg" alt="로고" />
+              </a>
+            </h1>
+          </div>
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="/" class="nav-item-text nav-item-text-active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="./guide.html" class="nav-item-text">Guide</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact" class="nav-item-text">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main-container">
+        <div class="main-container-inner">
+          <div class="section-group">
+            <h2 class="h2-title">Astro static template</h2>
+            <p class="description">
+              Astro 환경에서
+              <a class="blank-link" href="https://ko.wikipedia.org/wiki/Gulp.js" target="_blank">
+                gulp.js
+              </a>
+              처럼 빌드 시 정적인 html,css,js파일들을 생성하는 템플릿입니다.
+            </p>
+          </div>
+
+          <div class="section-group">
+            <h3 class="h3-title">사용 목적</h3>
+
+            <p class="description">아래와 같은 프로젝트에서 사용하기에 적합합니다.</p>
+
+            <ul class="list">
+              <li class="list-item">
+                백엔드 작업이 없는 오로지 HTML,CSS,JS를 이용한 사이트를 (퍼블리싱용) 개발할 때
+                편리합니다.
+              </li>
+              <li class="list-item">
+                회사 소개 사이트, 랜딩 페이지같이 간단한 페이지를 작업할 때 좋습니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-group">
+            <h3 class="h3-title">gulp.js보다 어떤 점이 더 좋은가?</h3>
+
+            <div class="list">
+              <li class="list-item">
+                Astro는 vite 기반으로 개발되어 로컬서버 실행 속도가 빠릅니다.
+              </li>
+              <li class="list-item">
+                필요하다면, .astro 파일 안에서
+                <a
+                  class="blank-link"
+                  href="https://docs.astro.build/en/guides/integrations-guide/"
+                  target="_blank"
+                >
+                  React, Vue, Svelte, Airplane 과 같은 프론트엔드 프레임워크들이랑 같이 사용할 수
+                  있습니다.
+                </a>
+              </li>
+              <li class="list-item">
+                그 외에도 페이지 전환을 앱 스타일로 할 수 있는
+                <a
+                  class="blank-link"
+                  href="https://docs.astro.build/en/guides/view-transitions/"
+                  target="_blank"
+                >
+                  View transitions,
+                </a>
+                <a
+                  class="blank-link"
+                  href="https://docs.astro.build/en/basics/astro-components/#slots"
+                  target="_blank"
+                >
+                  컴포넌트 설계 시 필요한 slot,
+                </a>
+                <a
+                  class="blank-link"
+                  href="https://docs.astro.build/en/guides/integrations-guide/mdx/"
+                  target="_blank"
+                >
+                  마크다운 파일 내에 컴포넌트를 넣을 수 있는 MDX
+                </a>
+                등, 많은 기능들을 지원하고 있습니다.
+              </li>
+            </div>
+
+            <div class="code-box">
+              <p class="description">리액트와 동일하게 map으로 요소를 반복시킬 수 있습니다.</p>
+              <div class="code-area">
+                <pre class="hljs-sc">      <code class="hljs language-js">---
+const array = [&quot;Dog&quot;, &quot;Cat&quot;, &quot;Platypus&quot;];
+---
+&lt;ul&gt;
+  {array.map(() =&gt; {
+    return(
+      &lt;li&gt;{item}&lt;/li&gt;
+    )
+  })}
+&lt;/ul&gt;
+</code>
+  </pre>
+              </div>
+            </div>
+
+            <div class="code-box">
+              <p class="description">
+                file include 개념이 아닌, 리액트와 동일한 컴포넌트 작업이 가능합니다.
+              </p>
+              <div class="code-area">
+                <pre
+                  class="hljs-sc"
+                >      <code class="hljs language-js">/* src/components/layout/Nav.astro */
+
+---
+const menus = [
+    {
+        name: &#39;Home&#39;, 
+        path: &#39;/&#39;
+    },
+    {
+        name: &#39;Guide&#39;, 
+        path: &#39;/guide&#39;
+    },
+    {
+        name: &#39;Contact&#39;,
+        path: &#39;contact&#39;
+    }
+];
+
+const currentPath = Astro.url.pathname;
+const { slug } = Astro.props;
+---
+
+&lt;nav class=&quot;nav&quot;&gt;
+    &lt;ul class=&quot;nav-list&quot;&gt;
+        {
+            menus.map((menu) =&gt; {
+            const href = menu.path;
+            const isActive = currentPath === href;
+
+            return (
+                &lt;li class=&quot;nav-item&quot;&gt;
+                    &lt;a href={href} class={`nav-item-text ${isActive ? &quot;nav-item-text-active&quot; : &quot;&quot;}`}&gt;
+                       {menu.name}
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            );
+            })
+        }
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+  </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

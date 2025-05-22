@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+object,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+button,
+abbr,
+address,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+section,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "PretendardVariable";
+}
+
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  /* ios, 사파리 기본 스타일 제거 */
+  color: inherit;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+input,
+button,
+a,
+select,
+option {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+select,
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+}
+
+input[type="radio"] {
+  appearance: auto !important;
+}
+
+caption,
+hr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+pre {
+  word-break: break-all;
+  white-space: pre;
+}
+
+li {
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  border: none;
+}
+
+em,
+i,
+strong,
+address {
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

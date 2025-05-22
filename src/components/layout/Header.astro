@@ -1,0 +1,19 @@
+---
+import Nav from "@/components/layout/Nav.astro";
+
+const { slug } = Astro.props;
+---
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">
+        <h1>
+          <a href="/">
+            <img src="/images/logo/logo.svg" alt="로고">
+          </a>
+        </h1> 
+    </div>
+
+    <Nav />
+  </div>
+</header>

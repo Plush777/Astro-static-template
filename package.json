@@ -1,0 +1,26 @@
+{
+  "name": "if-front-template",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build && node scripts/postprocess-html.js",
+    "preview": "astro preview",
+    "astro": "astro",
+    "posthtml": "node scripts/postprocess-html.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "astro": "^5.7.13",
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "@astrojs/netlify": "^6.3.3",
+    "astrobook": "^0.8.5",
+    "glob": "^11.0.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sass": "^1.89.0",
+    "vite-plugin-static-copy": "^3.0.0"
+  }
+}

@@ -1,0 +1,38 @@
+---
+const menus = [
+    {
+        name: 'Home', 
+        path: '/'
+    },
+    {
+        name: 'Guide', 
+        path: '/guide'
+    },
+    {
+        name: 'Contact',
+        path: 'contact'
+    }
+];
+
+const currentPath = Astro.url.pathname;
+const { slug } = Astro.props;
+---
+
+<nav class="nav">
+    <ul class="nav-list">
+        {
+            menus.map((menu) => {
+            const href = menu.path;
+            const isActive = currentPath === href;
+
+            return (
+                <li class="nav-item">
+                    <a href={href} class={`nav-item-text ${isActive ? 'nav-item-text-active' : ''}`}>
+                       {menu.name}
+                    </a>
+                </li>
+            );
+            })
+        }
+    </ul>
+</nav>

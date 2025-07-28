@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@mixin fai($align) {
+  display: flex;
+  align-items: $align;
+}
+
+@mixin fjc($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin fdir($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flexRow($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $weight: var(--font-weight-regular), $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

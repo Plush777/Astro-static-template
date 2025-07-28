@@ -1,0 +1,9 @@
+---
+const { langClassName = "language-html", code } = Astro.props;
+---
+
+<div class="code-area">
+  <pre class="hljs-sc">
+      <code class={`hljs ${langClassName}`}>{code}</code>
+  </pre>
+</div>

@@ -1,0 +1,15 @@
+---
+import StoryPage from 'astrobook/pages/story.astro'
+import { isAstroStory } from 'astrobook/client'
+import * as m from 'C:/Users/user/Desktop/astro-static-template/src/stories/AstroCounter.stories.js'
+
+const isAstro = isAstroStory(m)
+---
+
+<StoryPage story={'astro-counter/test-component'} hasSidebar={true}>
+  {
+    isAstro
+      ? (<m.default.component { ...m['TestComponent']?.args } />)
+      : (<m.default.component { ...m['TestComponent']?.args } client:load />)
+  }
+</StoryPage>

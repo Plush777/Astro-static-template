@@ -1,0 +1,120 @@
+---
+// AstroCounter 컴포넌트
+// 카운터 기능을 제공하는 인터랙티브 컴포넌트
+---
+
+<div class="counter-container">
+  <span id="count">0</span>
+  <div class="counter-controls">
+    <button id="decrease" class="counter-btn decrease-btn">-</button>
+    <button id="reset" class="counter-btn reset-btn">초기화</button>
+    <button id="increase" class="counter-btn increase-btn">+</button>
+  </div>
+</div>
+
+<style>
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 16px;
+  }
+
+  .counter-container h3 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+  }
+
+  #count {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+
+  .counter-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .counter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+    height: 40px;
+    color: #fff;
+  }
+
+  .decrease-btn {
+    background: #ef4444;
+  }
+
+  .reset-btn {
+    background: #6b7280;
+  }
+
+  .increase-btn {
+    background: #10b981;
+  }
+</style>
+
+<script>
+  // 카운터 기능 구현
+  let count = 0;
+  const countDisplay = document.getElementById("count");
+  const decreaseBtn = document.getElementById("decrease");
+  const resetBtn = document.getElementById("reset");
+  const increaseBtn = document.getElementById("increase");
+
+  // 카운트 업데이트 함수
+  function updateCount() {
+    countDisplay.textContent = count;
+  }
+
+  // 감소 버튼 이벤트
+  decreaseBtn.addEventListener("click", () => {
+    count--;
+    updateCount();
+  });
+
+  // 초기화 버튼 이벤트
+  resetBtn.addEventListener("click", () => {
+    count = 0;
+    updateCount();
+  });
+
+  // 증가 버튼 이벤트
+  increaseBtn.addEventListener("click", () => {
+    count++;
+    updateCount();
+  });
+
+  // 키보드 이벤트 지원
+  document.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "-":
+      case "ArrowDown":
+        count--;
+        updateCount();
+        break;
+      case "=":
+      case "+":
+      case "ArrowUp":
+        count++;
+        updateCount();
+        break;
+      case "r":
+      case "R":
+        count = 0;
+        updateCount();
+        break;
+    }
+  });
+</script>
